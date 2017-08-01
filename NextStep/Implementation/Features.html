@@ -1,0 +1,121 @@
+<TITLE>Features & Bug Fixes for  WorldWideWeb on the NeXT</TITLE>
+<NEXTID 10>
+<H1>Features and Bug Fixes</H1>The following are features added to the <A NAME=0 HREF=../WorldWideWeb.html>WWW app on the NeXT</A> with time,
+in reverse chronological order. See also the outstanding <A NAME=1 HREF=Bugs.html>bug list</A>
+. Credits in brackets are to those who mailed me with the bug reports,
+to whom thanks.<P>
+ 
+<H2>To be released: version 0.13</H2>
+<UL>
+<LI>The Search panel appears automatically when an index is the main window
+and disappears otherwise. The panel appears in the top right hand
+corner to be out of the way of document windows. The Cmd-F key and
+menu item are unnecessary.
+<LI>The "Open from hypertext reference" text is automatically loaded with
+the address of the main window as a default. This can be picked up
+and pasted into mail, etc.
+<LI>Bug fix:  Plain text windows don't get distortions in the vertical
+positioning of scan lines when you scroll them any more.
+<LI><A NAME=9>Bug fix</A>: Inability to access cs.orst.edu. WWW used the FTP "PASV"
+command when picking up remote files - some servers (eg cs.orst.edu)
+don't support this. Now it doesn't - it uses "PORT" instead, which
+is mandatory for servers. (Ira Fuchs)
+<LI>Bug fix: Failed attempts to load remote files now only produce one
+Alert panel instead of two one after the other. (Ira H Fuchs)
+<LI>Bug fix: Loading a newsgroup with no articles in crashed the application.
+Now it doesn't. Also, title bar "Connecting..." no longer left up
+once the connection has succeeded. (Ira H. Fuchs )
+<LI>Info->Panel is now not editable. (Michael D Mellinger )
+</UL>
+<H2>19 Aug 91 version 0.12</H2>
+<UL>
+<LI>Bug fix: .rtf files were loaded as plain text. ( burchard@horizon.math.utah.edu
+(Paul Burchard) )
+<LI>Default.html file shipped with the .app now has absolute references,
+and so will work on a remote site. (many people!)
+</UL>
+<H2>15 Mar 91 version 0.11</H2>
+<UL>
+<LI>Feature: If a file is not available locally, or mounted under /Net/hostname/...,
+the WWW will attempt to pick it up by anonymous FTP giving user@host
+as password. (Currently the user name given is always "user"!)
+<LI>Bug fix: If one didn't have a personal home file, two error messages
+would be given on startup. Now the system default is loaded without
+complaint. (Bug introduced at <A NAME=8 HREF=#7>version 0.9</A> )
+</UL>
+<H2>4 April 91 version 0.10</H2>
+<UL>
+<LI>Bug fix: A dummy window created when following a link to a different
+application would cause crashes if it was resized, or  if the link
+was followed a second time..
+</UL>
+<H2>3 April 91 version 0.9</H2>
+<UL>
+<LI>Bug fix: Closing a window which has been edited now prompts for a
+save as it should. <A NAME=7>Alert panels</A> have been introduced for some file
+system, communication and server errors.
+<LI>Bug fix: One can now edit files to which one has group access.	
+</UL>
+<H2>26 March 91 version 0.8</H2>
+<UL>
+<LI>Changed anchor highlighting from dark grey to underline, now underline
+is available. (I may make underline &/or colour a user preference
+or style later.)
+<LI>Modified paragraph spacing so that dummy spaces are not introduced
+between two paragraphs neither or which are "Normal" style. Also,
+now,  the space allowed is the larger of the "space before" the next
+paragraph and the "space after" the preceding paragraph, rather than
+the sum. Text is generally more compact.
+<LI>Bug fix: A few memory leaks removed with the aid of the excellent
+MallocDebug utility.
+<LI>Feature: When a new file is made, it is given a default title generated
+from the filename, irrespective of the title of the template.
+<LI>Fixed version 2 bug: The last run of a bit of text would have its
+formating information  overwritten by the previous run's format. Bug
+was in v2 [Text rebewRuns:text:frame:tag] not called any more.
+<LI>Fixed version 2 bug: Typing within anchor would produce non-anchor
+text, breaking the paragraph up when the docuement was saved and reloaded.
+(Not 100% tested)
+<LI>Version 2 enhancements came for free: Spell checking, "Windows" menu,
+"Services" menu. "File" (was "Window") menu is now renamed "Document".
+Also, random crashes seem to have disappeared since V2 (touch wood).
+<LI>Bug fix: Newly created windows can be edited the moment you have given
+a filename for them to be stored in: the bug which made them uneditable
+has been removed.
+<LI>Bug fix: No longer crshes when paragraph formatting a selection including
+the last character.
+<LI>Bug fix: The restyling of text can only occur if document is editable.
+It sets the document "edited".
+</UL>
+<H2>19 March 91 Version 0.7</H2>
+<UL>
+<LI>The annoying vertical fidgeting on loading a new window has been removed.
+<LI>"<A NAME=2 HREF=../../hypertext/WWW/NeXT/Menus.html#27> Print</A> " and "<A NAME=3 HREF=../../hypertext/WWW/NeXT/Menus.html#29> Page layout</A> " menu items have been added. Page layout
+maintains the "PageType" default in the NXDefaults database, so it
+is persisent between invokations. 
+<LI>"<A NAME=4 HREF=../../hypertext/WWW/NeXT/Menus.html#39> Help</A> " and "<A NAME=5 HREF=../../hypertext/WWW/NeXT/Menus.html#47> Open master template</A> " menu items added.
+<LI>"Window" menu renamed "File" to match v2.0 standards.
+<LI>"<A NAME=6 HREF=../../hypertext/WWW/NeXT/Menus.html#46> Link to File</A> " menu item allows direct link to files of this or
+any other application. (Not directories).
+<LI>Opening remote mounted hypertext files from the workspace now gives
+them the correct hypertext address, so that links made to them will
+be correct. 
+</UL>
+<H2>1 Feb 91 Version 0.5</H2>
+<UL>
+<LI>"New file" and "Link to New" and "Unlink" implemented.
+<LI>"Address" style implemented in HTML  "ADDRESS" tags.
+<LI>Bug fix: Long relative pathnames now treated properly.
+</UL>
+<H2>30 Jan 91 Version 0.4 </H2>
+<UL>
+<LI>Save and open panels have reasonable suggested filenames, and correct
+directories.
+<LI> If one creats an anchor the node becomes "edited". One cannot create
+anchors in unwritable nodes.
+<LI>The "editable" status of a file is deduced from its protection, uid,
+etc.
+<LI>The translation between local filenames of remote files and backnow
+works properly.
+<LI>Save in RTF or plaintext format now supported.
+<LI>Bug fix: No longer crashes on Cmd/W.

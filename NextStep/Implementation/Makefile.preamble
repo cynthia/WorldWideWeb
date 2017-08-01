@@ -1,0 +1,3 @@
+#	Preamble for Makeof  of W3 under NextStep 3.0
+
+CFLAGS = -DVC=NeXTStep

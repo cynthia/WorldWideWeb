@@ -1,0 +1,34 @@
+12
+Normal <P> 0 Helvetica 12.0 		1
+	90 90	14.0 3.0 	0 	0 14	0
+Address <P> 0 Helvetica-Oblique 12.0 		1
+	90 90	14.0 3.0 	1 	0 14	0
+Heading1 <H1> 0 Helvetica-Bold 18.0 	1
+	0 0	18.0 3.0 	2	0 36	0
+Heading2 <H2> 0 Helvetica-Bold 14.0 	1
+	0 0	14.0 3.0 	0	14 14	0
+Heading3 <H3> 0 Helvetica-Oblique 	14.0 	1
+	10 10 	14.0 3.0 	0	14 14	0
+Heading4 <H4> 0 Helvetica-Bold 12.0 	1
+	20 20 	14.0 3.0 	0	14 14	0
+Heading5 <H5> 0 Helvetica-Bold-Oblique 12.0 	1
+	30 30 	14.0 3.0 	0	14 14	0
+Heading6 <H6> 0 Helvetica-Bold 12.0 	1
+	40 40 	14.0 3.0 	0	14 14	0
+
+List <LI> 0 Helvetica 12.0			1
+        100 130	14 3		0 	0 14		2
+	0 130	0 300
+	
+Glossary <DL> 0 Helvetica 12.0		1
+        20 200	14 3		0	0 14		3
+	0 200	0 300 0 400
+	
+Example <XMP> 0 Ohlfs 10.0		1
+	0 0	14 3		0	0 0		9
+	0 48	0 96	0 144	0 192	0 240	0 288	0 336	0 384	0 432
+	
+Listing <LISTING> 0 Ohlfs 9.0		1
+	0 0	14 3		0	0 0		11
+	0 43.2	0 86.4	0 129.6	0 172.8	0 216	0 259.2	0 302.4	0 345.6	0 388.8	0 432
+	0 475.2

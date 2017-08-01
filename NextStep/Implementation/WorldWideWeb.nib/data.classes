@@ -1,0 +1,189 @@
+RexecAccess = {
+    SUPERCLASS = HyperAccess;
+};
+TextToy = {
+    ACTIONS = {
+	followLink:;
+	Do_setBackgroundGray:;
+	markSelected:;
+	linkToNew:;
+	linkToMark:;
+	Do_getSel:;
+	unlink:;
+	Do_getStartLength:;
+	markAll:;
+	dump:;
+    };
+    OUTLETS = {
+	SearchWindow;
+    };
+    SUPERCLASS = Object;
+};
+FirstResponder = {
+    ACTIONS = {
+    };
+    SUPERCLASS = Object;
+};
+StyleToy = {
+    ACTIONS = {
+	heading5Button:;
+	FindUnstyledButton:;
+	listButton:;
+	heading2Button:;
+	ApplyButton:;
+	NextButton:;
+	PreviousButton:;
+	saveAs:;
+	SetButton:;
+	heading4Button:;
+	heading1Button:;
+	heading3Button:;
+	normalButton:;
+	PickButton:;
+	ApplyToSimilar:;
+	glossaryButton:;
+	addressButton:;
+	exampleButton:;
+	heading6Button:;
+	open:;
+    };
+    OUTLETS = {
+	TabForm;
+	ParameterForm;
+	StylePanel;
+	NameForm;
+    };
+    SUPERCLASS = Object;
+};
+FileAccess = {
+    ACTIONS = {
+	linkToNew:;
+	saveAsPlainText:;
+	saveAs:;
+	makeNew:;
+	saveAsRichText:;
+	linkToFile:;
+    };
+    SUPERCLASS = HyperAccess;
+};
+NewsAccess = {
+    SUPERCLASS = HyperAccess;
+};
+WWWPageLayoutJunk = {
+    SUPERCLASS = Object;
+};
+TcpAccess = {
+    SUPERCLASS = HyperAccess;
+};
+HyperText = {
+    ACTIONS = {
+	followLink:;
+    };
+    SUPERCLASS = Text;
+};
+WWWPageLayout = {
+    ACTIONS = {
+	pickedUnits:;
+    };
+    OUTLETS = {
+	bottomMargin;
+	leftMargin;
+	sideForm;
+	topMargin;
+	rightMargin;
+	topBotForm;
+    };
+    SUPERCLASS = PageLayout;
+};
+Anchor = {
+    OUTLETS = {
+	OutgoingReference;
+	DestAnchor;
+	Node;
+    };
+    SUPERCLASS = Object;
+};
+DrawPageLayout = {
+    ACTIONS = {
+	pickedUnits:;
+    };
+    OUTLETS = {
+	topMargin;
+	leftMargin;
+	bottomMargin;
+	rightMargin;
+    };
+    SUPERCLASS = PageLayout;
+};
+HyperAccess = {
+    ACTIONS = {
+	search:;
+	openRTF:;
+	searchRTF:;
+	openSGML:;
+	searchSGML:;
+	open:;
+	hyperTextDidBecomeMain:;
+    };
+    OUTLETS = {
+	keywords;
+	manager;
+	contentSearch;
+	openString;
+	titleString;
+	addressString;
+    };
+    SUPERCLASS = Object;
+};
+HyperManager = {
+    ACTIONS = {
+	print:;
+	help:;
+	next:;
+	save:;
+	traceOn:;
+	previous:;
+	goToBlank:;
+	linkToString:;
+	copyAddress:;
+	inspectLink:;
+	back:;
+	traceOff:;
+	setTitle:;
+	runPagelayout:;
+	goHome:;
+	closeOthers:;
+	saveAll:;
+	windowDidBecomeKey:;
+    };
+    OUTLETS = {
+    };
+    SUPERCLASS = HyperAccess;
+};
+Browser = {
+    SUPERCLASS = Application;
+};
+PageLayout = {
+    ACTIONS = {
+	pickedPaperSize:;
+	pickedUnits:;
+	pickedButton:;
+	pickedLayout:;
+	pickedOrientation:;
+    };
+    OUTLETS = {
+	ok;
+	unitsList;
+	paperView;
+	paperSizeList;
+	scale;
+	orientation;
+	cancel;
+	height;
+	accessoryView;
+	layoutList;
+	appIcon;
+	width;
+    };
+    SUPERCLASS = Panel;
+};

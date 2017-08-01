@@ -1,0 +1,28 @@
+Anchor.o : Anchor.m Anchor.h HTUtils.h HTParse.h HyperText.h HTStyle.h \
+  HyperManager.h HyperAccess.h 
+FileAccess.o : FileAccess.m FileAccess.h HyperAccess.h Anchor.h HyperText.h \
+  HTStyle.h HTUtils.h WWW.h HTParse.h HTTCP.h HTFTP.h HTFile.h 
+HTStyle.o : HTStyle.m HTStyle.h HTUtils.h 
+HyperAccess.o : HyperAccess.m HyperAccess.h Anchor.h HyperText.h HTStyle.h \
+  HyperManager.h HTUtils.h 
+HyperManager.o : HyperManager.m HyperManager.h HyperAccess.h Anchor.h \
+  HyperText.h HTStyle.h HTUtils.h HTParse.h FileAccess.h WWWPageLayout.h 
+HyperText.o : HyperText.m HyperText.h Anchor.h HTStyle.h HyperAccess.h \
+  HTUtils.h HTParse.h WWW.h ParseHTML.h 
+NewsAccess.o : NewsAccess.m NewsAccess.h HyperAccess.h Anchor.h HyperText.h \
+  HTStyle.h HTParse.h HTUtils.h 
+StyleToy.o : StyleToy.m StyleToy.h HTParse.h HTStyle.h HTUtils.h \
+  HyperText.h Anchor.h 
+TcpAccess.o : TcpAccess.m TcpAccess.h HyperAccess.h Anchor.h HyperText.h \
+  HTStyle.h HTUtils.h HTTP.h 
+TextToy.o : TextToy.m TextToy.h Anchor.h HyperAccess.h HyperText.h \
+  HTStyle.h HTUtils.h 
+WWWPageLayout.o : WWWPageLayout.m WWWPageLayout.h 
+WorldWideWeb_main.o : WorldWideWeb_main.m HTUtils.h 
+HTAccess.o : HTAccess.c HTParse.h HTUtils.h WWW.h HTFTP.h HTTP.h HTFile.h \
+  tcp.h 
+HTFTP.o : HTFTP.c HTParse.h HTUtils.h tcp.h HTTCP.h 
+HTFile.o : HTFile.c HTUtils.h WWW.h HTParse.h tcp.h HTTCP.h HTFTP.h 
+HTParse.o : HTParse.c HTUtils.h HTParse.h tcp.h 
+HTTCP.o : HTTCP.c HTUtils.h tcp.h 
+HTTP.o : HTTP.c HTParse.h HTUtils.h tcp.h 
